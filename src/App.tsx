@@ -1,10 +1,11 @@
-import { useAppTheme } from "./hooks/useAppTheme";
-
+import { HeaderComponent } from "./components/header/header.component";
+import { useAppRouter } from "./hooks/useAppRouter";
 function App() {
-  const {handleSwitchTheme} = useAppTheme()
+  const { publicRouter } = useAppRouter();
   return (
-    <div className="h-screen w-full flex justify-center items-center dark:bg-neutral-900">
-      <button onClick={handleSwitchTheme} className="p-2 bg-slate-200 hover:bg-slate-300">Change theme</button>
+    <div className="bg-grey px-[140px] py-[90px] w-full h-screen dark:bg-navy-dark">
+      <HeaderComponent/>
+      {publicRouter}
     </div>
   );
 }
