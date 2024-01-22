@@ -154,6 +154,19 @@ input:-webkit-autofill:active {
 textarea:focus {
   outline: 0;
 }
+
+@font-face {
+  font-family: RubikItalic;
+  src: url("./assets/fonts/Rubik-Italic-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: Rubik;
+  src: url("./assets/fonts/Rubik-VariableFont_wght.ttf");
+}
+body * {
+  font-family: Rubik;
+}
+
 button {
   margin: 0;
   -webkit-appearance: none;
