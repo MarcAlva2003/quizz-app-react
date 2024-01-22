@@ -1,6 +1,8 @@
 .header-component {
   width: 100%;
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
+  height: 72px;
+  align-items: center;
+  padding: 0 24px;
 }
