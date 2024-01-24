@@ -19,6 +19,10 @@ export default {
         bluish: '#ABC1E1',
         green: '#26D782',
         red: '#EE5454',
+      },
+      boxShadow: {
+        optionLight: '0px 16px 40px 0px rgba(143, 160, 193, 0.14)',
+        optionDark: '0px 16px 40px 0px rgba(49, 62, 81, 0.14)',
       }
     },
   },
