@@ -1,8 +1,23 @@
 .home-title h1 {
   font-size: 40px;
   font-weight: 300;
-  line-height: 100%;
+  line-height: calc(100% + 4px);
+  margin-bottom: 16px;
+  @apply text-navy-dark;
   span {
     font-weight: 600;
+  }
+}
+.home-subtitle p {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  @apply text-navy-grey;
+  margin-bottom: 40px;
+}
+.option-item-component {
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0;
   }
 }
