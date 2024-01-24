@@ -21,3 +21,13 @@
     margin-bottom: 0;
   }
 }
+@media (min-width: 768px) {
+  .home-title h1 {
+    font-size: 64px;
+    line-height: calc(100% + 8px);
+  }
+  .home-subtitle p {
+    font-size: 20px;
+    margin-bottom: 64px;
+  }
+}

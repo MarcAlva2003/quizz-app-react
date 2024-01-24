@@ -1,3 +1,10 @@
 .app-routes-container {
   padding: 0 24px;
 }
+
+@media (min-width: 768px){
+  .app-routes-container {
+    padding: 0 64px;
+  }
+  
+}
