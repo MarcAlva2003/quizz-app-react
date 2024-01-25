@@ -13,6 +13,8 @@
   font-style: italic;
   font-weight: 400;
   @apply text-navy-grey dark:text-bluish;
+}
+.home-text {
   margin-bottom: 40px;
 }
 .option-item-component {
@@ -28,6 +30,21 @@
   }
   .home-subtitle p {
     font-size: 20px;
+  }
+  .home-text {
     margin-bottom: 64px;
+  }
+}
+@media (min-width: 1024px){
+  .home-text {
+    margin-bottom: 0;
+  }
+  .home-title h1 {
+    margin-bottom: 48px;
+  }
+  .home-screen-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }

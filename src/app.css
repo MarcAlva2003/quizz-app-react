@@ -6,5 +6,9 @@
   .app-routes-container {
     padding: 0 64px;
   }
-  
+}
+@media (min-width: 1024px){
+  .app-routes-container {
+    padding: 0 143px;
+  }
 }

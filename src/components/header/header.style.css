@@ -13,3 +13,10 @@
     margin-bottom: 8px;
   }
 }
+@media (min-width: 1024px){
+  .header-component {
+    height: 200px;
+    padding: 0px 132px;
+    margin-bottom: 2px;
+  }
+}

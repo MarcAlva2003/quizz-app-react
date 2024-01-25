@@ -9,17 +9,19 @@ export const HomeModule = () => {
   const { quizList } = useQuizData();
 
   return (
-    <div className="home-container">
-      <div className="home-title">
-        <h1>
-          Welcome to the <br />
-          <span>Frontend Quiz</span>
-        </h1>
-      </div>
-      <div className="home-subtitle">
-        <p>Pick a subject to get started.</p>
-      </div>
-      <div className="home-quiz-categories">
+    <div className="home-screen-container">
+      <section className="home-text">
+        <div className="home-title">
+          <h1>
+            Welcome to the <br />
+            <span>Frontend Quiz</span>
+          </h1>
+        </div>
+        <div className="home-subtitle">
+          <p>Pick a subject to get started.</p>
+        </div>
+      </section>
+      <section className="home-quiz-categories">
         {quizList &&
           quizList.map((item: IQuizCategoryFormatted) => (
             <OptionItemComponent
@@ -29,7 +31,7 @@ export const HomeModule = () => {
               leftBg={item.backgroundColor}
             />
           ))}
-      </div>
+      </section>
     </div>
   );
 };
