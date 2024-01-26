@@ -1,30 +1,50 @@
-# React + TypeScript + Vite
+# Frontend Quiz React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hi! Welcome to this Challenge from [Frontend Mentor](https://www.frontendmentor.io)!
 
-Currently, two official plugins are available:
+This project is still in progress, but anyway you can [visit](https://quizz-app-react-three.vercel.app/) it to see the progress.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It´s done with React + Typescript, and it consumes the quizzes data from a local JSON. It´s responsive and I´m using tailwind just to do the darkmode function (Sorry, I´m not a Tailwind fan!😁).
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Here are the tools I´m using to do this project:
+- [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/frontend-quiz-app-BE7xkzXQnU): This is an intermediate level challenge.
 
-- Configure the top-level `parserOptions` property like this:
+- [Figma](https://www.figma.com/file/gCpWQLVTplSEVQXsuqFwz7/frontend-quiz-app?node-id=205%3A403&mode=dev): provided by Frontend Mentor.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## File Structure
+
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+.
+├── public
+├── src
+│   ├── assets
+│   │   ├── fonts
+│   │   ├── images
+│   │   └── data.json
+│   ├── components
+│   │   ├── header
+│   │   ├── in-progress-modal
+│   │   ├── option-item
+│   │   └── theme-switch
+│   ├── hooks
+│   │   ├── useAppRouter.tsx
+│   │   ├── useAppTheme.tsx
+│   │   └── useQuizData.tsx
+│   ├── interfaces
+│   ├── modules
+│   │   └── home.module.tsx
+│   ├── pages
+│   │   ├── home.page.tsx
+│   │   └── quizz.page.tsx
+│   ├── services
+│   │   └── quiz.service.tsx
+│   ├── UI (components)
+│   │   ├── button
+│   │   ├── icon-component
+│   │   └── switch
+│   ├── App.tsx
+│   └── main.tsx
+├── index.html
+└── README.md
+```

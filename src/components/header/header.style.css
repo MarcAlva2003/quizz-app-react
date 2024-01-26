@@ -1,0 +1,22 @@
+.header-component {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  align-items: center;
+  padding: 0 24px;
+}
+@media (min-width: 768px){
+  .header-component {
+    height: 136px;
+    padding: 0px 64px;
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 1024px){
+  .header-component {
+    height: 200px;
+    padding: 0px 132px;
+    margin-bottom: 2px;
+  }
+}
