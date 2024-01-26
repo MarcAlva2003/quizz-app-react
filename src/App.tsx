@@ -9,7 +9,7 @@ function App() {
   const { publicRouter } = useAppRouter();
   const [showProgressModal, setProgressModal] = useState<boolean>(true);
   return (
-    <div className="bg-grey w-full h-screen dark:bg-navy-dark app-content-container">
+    <div className="bg-grey w-full min-h-screen dark:bg-navy-dark app-content-container">
       <HeaderComponent />
       <section className="w-full app-routes-container">{publicRouter}</section>
       <InProgressModal
