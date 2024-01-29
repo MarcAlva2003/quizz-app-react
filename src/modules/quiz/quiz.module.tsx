@@ -1,17 +1,17 @@
-import './quiz.style.css'
+import "./quiz.style.css";
 
 import {
   ICategories,
-  IQuizCategoryFormatted,
   IQuizQuestion,
 } from "../../interfaces/quiz-data.interface";
 import { useEffect, useMemo, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 import { Button } from "../../UI/button/button.component";
 import { CategoryTitle } from "../../components/categoty-title/category-title.component";
 import { OptionItemComponent } from "../../components/option-item/option-item.component";
 import { ProgressBar } from "../../UI/progress-bar/progress-bar.component";
-import { useParams } from "react-router-dom";
+import { useQuizContext } from "../../context/quiz.context";
 import { useQuizData } from "../../hooks/useQuizData";
 
 export interface IQuizQuestionFormatted {
@@ -20,9 +20,7 @@ export interface IQuizQuestionFormatted {
 }
 
 export const QuizModule = () => {
-  const [categoryData, setCategoryData] = useState<
-    IQuizCategoryFormatted | undefined
-  >(undefined);
+  const { categoryData, setCategoryData } = useQuizContext();
   const [questions, setQuestions] = useState<IQuizQuestion[] | undefined>(
     undefined
   );
@@ -76,6 +74,11 @@ export const QuizModule = () => {
   const handleSumit = () => {
     answerSubmited ? handleNextStep() : handleSumitAnswer();
   };
+  const navigate = useNavigate();
+
+  const handlePlayAgain = () => {
+    navigate('/')
+  }
 
   useEffect(() => {
     if (!categoryData) {
@@ -93,6 +96,9 @@ export const QuizModule = () => {
 
   useEffect(() => {
     getCategory();
+    return () => {
+      setCategoryData(undefined)
+    }
   }, [category]);
 
   return quizCompleted ? (
@@ -111,15 +117,17 @@ export const QuizModule = () => {
           <div className="score-right--container__points">
             <h2>{points}</h2>
           </div>
-          <div className="score-right--container__length">out of {questions?.length}</div>
+          <div className="score-right--container__length">
+            out of {questions?.length}
+          </div>
         </div>
         <div className="score-right--button">
-          <Button onClick={() => {}} text='Play Again' />
+          <Button onClick={handlePlayAgain} text="Play Again" />
         </div>
       </div>
     </section>
   ) : currentCuestion && questions ? (
-    <section className='question-container'>
+    <section className="question-container">
       <div className="question-left">
         <div className="question-left--text">
           <p>
