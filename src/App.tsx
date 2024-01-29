@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function App() {
   const { publicRouter } = useAppRouter();
-  const [showProgressModal, setProgressModal] = useState<boolean>(true);
+  const [showProgressModal, setProgressModal] = useState<boolean>(false);
   return (
     <div className="bg-grey w-full min-h-screen dark:bg-navy-dark app-content-container">
       <HeaderComponent />
