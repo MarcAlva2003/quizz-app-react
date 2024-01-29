@@ -10,7 +10,6 @@ export const getQuizData = async () => {
     }
     return data;
   } catch (err) {
-    console.log(err);
     return undefined;
   }
 };

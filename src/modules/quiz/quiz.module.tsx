@@ -60,7 +60,6 @@ export const QuizModule = () => {
       setFocusOption(-1);
       setStep(step + 1);
     } else {
-      console.log("HERE");
       setQuizCompleted(true);
     }
   };
