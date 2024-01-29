@@ -9,5 +9,6 @@
   min-width: 4px;
   border-radius: 4px;
   height: 8px;
+  transition: width .8s ease;
   @apply bg-purple;
 }

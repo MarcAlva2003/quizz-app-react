@@ -108,6 +108,12 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 100px;
   }
+  .question-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 54px;
+  }
   .score-show {
     display: grid;
     grid-template-columns: 1fr 1fr;

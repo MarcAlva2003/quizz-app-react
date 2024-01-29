@@ -12,6 +12,6 @@
 }
 @media (min-width: 1024px) {
   .button-component {
-    @apply hover:opacity-50;
+    @apply hover:opacity-80 active:opacity-50;
   }
 }
