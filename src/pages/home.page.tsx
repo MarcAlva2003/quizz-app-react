@@ -1,4 +1,4 @@
-import { HomeModule } from "../modules/home.module";
+import { HomeModule } from "../modules/home/home.module";
 import { InProgressModal } from "../components/in-progress-modal/in-progress-modal.component";
 import { useState } from "react";
 

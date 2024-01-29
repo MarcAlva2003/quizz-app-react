@@ -1,11 +1,11 @@
 import "./home.style.css";
 
-import { IQuizCategoryFormatted } from "../interfaces/quiz-data.interface";
-import { OptionItemComponent } from "../components/option-item/option-item.component";
-import { SVGIcon } from "../UI/icon-component/icon.component";
-import { useAppRouter } from "../hooks/useAppRouter";
+import { IQuizCategoryFormatted } from "../../interfaces/quiz-data.interface";
+import { OptionItemComponent } from "../../components/option-item/option-item.component";
+import { SVGIcon } from "../../UI/icon-component/icon.component";
+import { useAppRouter } from "../../hooks/useAppRouter";
 import { useNavigate } from "react-router-dom";
-import { useQuizData } from "../hooks/useQuizData";
+import { useQuizData } from "../../hooks/useQuizData";
 
 export const HomeModule = () => {
   const { quizList } = useQuizData();
