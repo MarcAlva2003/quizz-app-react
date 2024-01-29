@@ -1,0 +1,27 @@
+.float-button-component {
+  position: fixed;
+  right: 24px;
+  bottom: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @apply bg-navy-grey text-white shadow-optionLight dark:shadow-optionDark dark:bg-navy-navy;
+  p {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .float-button-component {
+    width: 70px;
+    height: 70px;
+    right: 64px;
+    bottom: 34px;
+    p {
+      font-size: 30px;
+    }
+  }
+}

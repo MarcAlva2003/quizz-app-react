@@ -25,7 +25,6 @@ export const InProgressModal = (props: IInProgressModal) => {
             <p>As this project is still being developed, here you have some tasks I´m working on right now:</p>
             <ul>
               <li>Code refactor</li>
-              <li>Project information modal</li>
               <li>Animations</li>
               <li>Dark Mode</li>
             </ul>
