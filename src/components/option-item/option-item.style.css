@@ -6,6 +6,7 @@
   justify-content: space-between;
   @apply bg-white dark:bg-navy-navy shadow-optionLight dark:shadow-optionDark border border-solid border-white dark:border-navy-navy;
   padding: 10px;
+  user-select: none;
 }
 .option-item-component--focus {
   @apply border border-solid border-purple dark:border-purple;
@@ -63,6 +64,8 @@
   .option-item--left__icon {
     width: 56px;
     height: 56px;
+    min-width: 56px;
+    min-height: 56px;
     border-radius: 12px;
     margin-right: 32px;
     padding: 8px;
