@@ -9,6 +9,10 @@ export const useProgressModal = () => {
     localStorage.setItem(LOCAL_STORAGE_KEY, "false")
   }
 
+  const openModal = () => {
+    setProgressModal(true);
+  }
+
   useEffect(() => {
     if (!JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY) ?? "true")) {
       return;
@@ -19,5 +23,6 @@ export const useProgressModal = () => {
   return {
     showProgressModal,
     closeModal,
+    openModal
   }
 }
