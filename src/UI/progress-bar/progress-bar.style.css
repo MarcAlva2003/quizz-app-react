@@ -6,6 +6,7 @@
 }
 .progress-bar-progress {
   max-width: 100%;
+  min-width: 4px;
   border-radius: 4px;
   height: 8px;
   @apply bg-purple;
