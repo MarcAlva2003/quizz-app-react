@@ -20,18 +20,17 @@ export const InProgressModal = (props: IInProgressModal) => {
           <div className="in-progress-modal-content" onClick={(ev) => {ev.stopPropagation()}}>
             <h2>Hi! Nice to see you here! 😁</h2>
             <p>
-              This project is still being developed, but anyway here you can see
-              the progress.
+              Welcome to the fist beta of this project!
             </p>  
-            <p>Here are some tasks I´m working on right now:</p>
+            <p>As this project is still being developed, here you have some tasks I´m working on right now:</p>
             <ul>
-              <li>Quiz logic</li>
+              <li>Code refactor</li>
               <li>Project information modal</li>
-              <li>Button component</li>
-              <li>Quiz progress bar component</li>
+              <li>Animations</li>
+              <li>Dark Mode</li>
             </ul>
             <p>Happy Quiz!</p>
-            <p className="in-progress-last-update-date">Last update: 25/01/2024</p>
+            <p className="in-progress-last-update-date">Last update: 29/01/2024</p>
             <button onClick={onClose}>Continue!</button>
           </div>
         </div>,

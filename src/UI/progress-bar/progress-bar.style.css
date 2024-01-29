@@ -1,0 +1,13 @@
+.progress-bar-component {
+  width: 100%;
+  padding: 4px;
+  border-radius: 8px;
+  @apply bg-white dark:bg-navy-navy;
+}
+.progress-bar-progress {
+  max-width: 100%;
+  min-width: 4px;
+  border-radius: 4px;
+  height: 8px;
+  @apply bg-purple;
+}
