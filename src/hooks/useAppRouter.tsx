@@ -1,4 +1,4 @@
-import { RouteObject, useRoutes } from "react-router-dom";
+import { Navigate, RouteObject, useRoutes } from "react-router-dom";
 
 import { HomePage } from "../pages/home.page";
 import { QuizzPage } from "../pages/quizz.page";
@@ -26,6 +26,10 @@ export const useAppRouter = () => {
     {
       path: publicRoutes.QUIZZ,
       element: <QuizzPage />,
+    },
+    {
+      path: publicRoutes.NOT_FOUND,
+      element: <Navigate to={publicRoutes.HOME} />,
     },
   ];
 
