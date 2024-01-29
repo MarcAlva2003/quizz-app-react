@@ -4,7 +4,7 @@ import {
   ICategories,
   IQuizQuestion,
 } from "../../interfaces/quiz-data.interface";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { Button } from "../../UI/button/button.component";
@@ -76,8 +76,8 @@ export const QuizModule = () => {
   const navigate = useNavigate();
 
   const handlePlayAgain = () => {
-    navigate('/')
-  }
+    navigate("/");
+  };
 
   useEffect(() => {
     if (!categoryData) {
@@ -93,12 +93,23 @@ export const QuizModule = () => {
     selectedCatedoty && setCategoryData(selectedCatedoty);
   };
 
+  const submitBtnRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     getCategory();
     return () => {
-      setCategoryData(undefined)
-    }
+      setCategoryData(undefined);
+    };
   }, [category]);
+
+  useEffect(() => {
+    if (!submitBtnRef.current) {
+      return;
+    }
+    if (answerSubmited || focusOption >= 0 || quizCompleted) {
+      submitBtnRef.current.focus()
+    }
+  }, [answerSubmited, focusOption, quizCompleted])
 
   return quizCompleted ? (
     <section className="score-show">
@@ -160,6 +171,7 @@ export const QuizModule = () => {
             onClick={handleSumit}
             disabled={!answerSubmited && focusOption < 0}
             text={answerSubmited ? "Next Question" : "Submit"}
+            ref={submitBtnRef}
           />
         </div>
       </div>
