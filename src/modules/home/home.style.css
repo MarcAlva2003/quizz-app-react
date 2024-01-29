@@ -1,3 +1,6 @@
+.home-screen-container {
+  padding-bottom: 40px;
+}
 .home-title h1 {
   font-size: 40px;
   font-weight: 300;
@@ -35,7 +38,7 @@
     margin-bottom: 64px;
   }
 }
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
   .home-text {
     margin-bottom: 0;
   }

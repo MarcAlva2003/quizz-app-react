@@ -24,10 +24,10 @@ export const useQuizData = () => {
     accessibility: accessibilityIcon,
   };
   const CATEGORIES_BG = {
-    html: '#FFF1E9',
-    css: '#E0FDEF',
-    javascript: '#EBF0FF',
-    accessibility: '#F6E7FF',
+    html: "#FFF1E9",
+    css: "#E0FDEF",
+    javascript: "#EBF0FF",
+    accessibility: "#F6E7FF",
   };
 
   const getCategotyIcon = (category: ICategories) => {
@@ -40,7 +40,6 @@ export const useQuizData = () => {
   const data = async () => {
     setIsLoading(true);
     const data = await getQuizData();
-    console.log({ data });
     if (data) {
       setQuizList(
         data.map((item: IQuizCategory) => {
@@ -49,10 +48,32 @@ export const useQuizData = () => {
             ...item,
             icon: getCategotyIcon(category),
             category,
-            backgroundColor: getCategotyBg(category)
+            backgroundColor: getCategotyBg(category),
           };
         })
       );
+    }
+    setIsLoading(false);
+  };
+
+  const getQuestionsByCategory = async (category: ICategories) => {
+    setIsLoading(true);
+    const data = await getQuizData();
+    if (data) {
+      const newData = data.find((item) => {
+        const itemCategory: ICategories =
+          item.title.toLowerCase() as ICategories;
+        return itemCategory === category;
+      });
+      if (!newData) {
+        return;
+      }
+      return {
+        ...newData,
+        icon: getCategotyIcon(category),
+        category,
+        backgroundColor: getCategotyBg(category),
+      };
     }
     setIsLoading(false);
   };
@@ -65,5 +86,6 @@ export const useQuizData = () => {
     quizList,
     setQuizList,
     isLoading,
+    getQuestionsByCategory,
   };
 };

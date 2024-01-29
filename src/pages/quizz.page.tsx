@@ -1,12 +1,5 @@
-import { useParams } from 'react-router-dom';
+import { QuizModule } from "../modules/quiz/quiz.module";
 
 export const QuizzPage = () => {
-const {category} = useParams();
-console.log({category});
-
-  return (
-    <>
-    Quizz
-    </>
-  )
-}
+  return <QuizModule />;
+};

@@ -13,6 +13,9 @@ export interface IQuizCategory {
 export type ICategories = "html" | "css" | "javascript" | "accessibility";
 
 export interface IQuizCategoryFormatted extends IQuizCategory {
+  // title: string;
+  // icon: string;
+  // questions: IQuizQuestion[]
   category: ICategories;
   backgroundColor: string;
 }
