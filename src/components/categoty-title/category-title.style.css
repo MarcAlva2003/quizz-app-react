@@ -1,0 +1,11 @@
+.category-title-component {
+  display: flex;
+  border-radius: 40px;
+  align-items: center;
+}
+.category-title-icon {
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  margin-right: 16px;
+}
