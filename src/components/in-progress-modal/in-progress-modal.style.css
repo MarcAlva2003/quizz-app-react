@@ -18,14 +18,16 @@
   width: 100%;
   height: auto;
   padding: 24px;
-  @apply bg-white dark:bg-navy-dark dark:text-white;
   border-radius: 24px;
   max-width: 410px;
   user-select: none;
   animation: contentSize forwards 0.5s;
+  font-weight: 300;
+  @apply bg-white dark:bg-navy-dark dark:text-white;
   h2 {
     font-size: 34px;
     margin-bottom: 24px;
+    font-weight: 400;
   }
   p {
     margin-bottom: 16px;
@@ -51,10 +53,12 @@
     padding: 12px;
     border-radius: 16px;
     text-align: center;
+    font-weight: 500;
     @apply bg-black text-white dark:bg-navy-navy;
   }
   .in-progress-last-update-date {
     color: #989898;
+    font-weight: 500;
     font-size: 14px;
   }
 }
@@ -71,7 +75,7 @@
 @keyframes contentSize {
   0% {
     opacity: 0;
-    transform: scale(.2);
+    transform: scale(0.2);
   }
   100% {
     opacity: 1;
