@@ -7,7 +7,7 @@ import { useAppRouter } from "./hooks/useAppRouter";
 function App() {
   const { publicRouter } = useAppRouter();
   return (
-    <div className="bg-grey w-full min-h-screen dark:bg-navy-dark app-content-container">
+    <div className="bg-grey w-full min-h-screen dark:bg-navy-dark app-content-bg">
       <QuizContextProvider>
         <HeaderComponent />
         <section className="w-full app-routes-container">
