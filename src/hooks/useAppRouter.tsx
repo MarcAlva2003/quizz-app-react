@@ -6,6 +6,7 @@ import { QuizzPage } from "../pages/quizz.page";
 export interface IPublicRoutes {
   HOME: string;
   QUIZZ: string;
+  QUIZZ_LINK: string;
   NOT_FOUND: string;
 }
 
@@ -13,6 +14,7 @@ export const useAppRouter = () => {
   const publicRoutes: IPublicRoutes = {
     HOME: "/",
     QUIZZ: "/quizz/:category",
+    QUIZZ_LINK: "/quizz/",
     NOT_FOUND: "*",
   };
 
