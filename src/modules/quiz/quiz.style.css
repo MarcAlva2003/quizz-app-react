@@ -23,7 +23,9 @@
 .question-right--submit {
   margin-bottom: 40px;
 }
-
+.score-show {
+  padding-bottom: 40px;
+}
 .score-left {
   margin-bottom: 40px;
   &--title {
@@ -62,7 +64,7 @@
     }
   }
 }
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .question-left--text {
     margin-bottom: 40px;
     p {
@@ -79,5 +81,24 @@
   }
   .question-right--options {
     margin-bottom: 24px;
+  }
+  .score-left {
+    margin-bottom: 64px;
+    &--title {
+      font-size: 64px;
+      line-height: calc(100% + 8px);
+    }
+  }
+  .score-right {
+    &--container {
+      margin-bottom: 32px;
+      padding: 48px;
+      &__points {
+        font-size: 144px;
+      }
+      &__length {
+        font-size: 24px;
+      }
+    }
   }
 }
