@@ -20,6 +20,9 @@
 .question-right--options {
   margin-bottom: 12px;
 }
+.question-right--submit {
+  margin-bottom: 40px;
+}
 
 .score-left {
   margin-bottom: 40px;
@@ -57,5 +60,24 @@
       text-align: center;
       @apply text-navy-grey dark:text-bluish;
     }
+  }
+}
+@media (min-width: 768px){
+  .question-left--text {
+    margin-bottom: 40px;
+    p {
+      font-size: 20px;
+      margin-bottom: 27px;
+      line-height: 150%;
+    }
+    h2 {
+      font-size: 36px;
+    }
+  }
+  .question-left--progress {
+    margin-bottom: 64px;
+  }
+  .question-right--options {
+    margin-bottom: 24px;
   }
 }
